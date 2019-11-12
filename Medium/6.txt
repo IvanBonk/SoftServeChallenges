@@ -1,0 +1,22 @@
+*Alphabetical numbers*
+
+Given a collection of integers, sort them alphabetically based on the words for these numbers.
+
+Input: The first line in the data set is an integer that represents the number of data collections that follow. There are an unknown number of integers in each data collection. The integer 0 is used to indicate the end of the collection of integers.
+
+Output: List the “sorted” integers in each collection on a separate line.
+The output is to be formatted exactly like that for the sample output given below.
+
+Assumptions: The maximum number of integers is 10.
+The integers are in the range 1..19.
+There are no duplicates within a data set.
+
+Discussion: 1 2 3 4 would be sorted as 4 1 3 2. Four, one, three, and two are alphabetical.
+
+EXAMPLES
+==============================================
+Input: 7 5 12 9 16 0
+Output: 5 9 7 16 12 
+==============================================
+Input: 11 12 13 14 15 0
+Output: 11 15 14 13 12

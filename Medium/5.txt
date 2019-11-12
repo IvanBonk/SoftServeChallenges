@@ -1,0 +1,18 @@
+*Binary to decimal*
+
+A binary number is a sequence of bits (binary digits – 0’s and 1’s) of the form
+BnBn-1……B1 B0, where each Bi is a bit.
+
+The decimal equivalent is calculated by Bn * 2n+ Bn-1 * 2n-1 + … + B1 * 2 + B0.
+
+Write a program to input a binary number and output the decimal equivalent.
+
+The sample input will not have more than 8 individual bits (i.e., the largest value to be entered is 11111111).
+
+EXAMPLES
+==============================================
+Input: 101
+Output: 5
+==============================================
+Input: 11111
+Output: 31
