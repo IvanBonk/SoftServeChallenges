@@ -1,3 +1,33 @@
+////////////////////////////////////////
+// Letter Changes
+
+function LetterChanges(str) {
+    let buff = str.split('');
+    for(let i = 0; i < buff.length; i++) {
+        if(/[a-zA-Z]/.test(buff[i])) {
+            let code = buff[i].charCodeAt();
+            if(code === 90 || code === 122) {
+                buff[i] = code === 90 ? 
+                String.fromCharCode(65) : 
+                String.fromCharCode(97);
+            } else {
+                buff[i] = String.fromCharCode(code + 1);
+            }
+        }
+        if (/[aouei]/.test(buff[i])) {
+            buff[i] = buff[i].toUpperCase();
+        }
+        
+    }
+    return buff.join('');
+}
+console.log(LetterChanges('hello*3'));
+console.log(LetterChanges('fun times!'));
+
+
+/////////////////////////////////////////
+// Correct Path
+
 function CorrectPath(str) {
     let buff = str.split(''),
         sides = ['u','r','d','l'];
@@ -73,3 +103,19 @@ console.log(CorrectPath('drdr??rrddd?')); //Output: drdruurrdddd
 
 console.log(CorrectPath('rr?ldrr?lll?rrr?')); //rrdldrrdllldrrrr
 console.log(CorrectPath('ddr?u?rr?lldd?l?r?r?')); //ddruurrrdllddlldrrrr
+
+///////////////////////////////////////
+// Binary to decimal
+
+function BinToDem(num) {
+    let buff = String(num).split('').reverse(),
+        res =  0;
+    for(let i = 0; i < buff.length; i++) {
+        if(+buff[i] === 1){
+            res += Math.pow(2, i);
+        } 
+    }
+    return res;
+}
+console.log(BinToDem(100001111)); //271
+console.log(BinToDem(11111)); //31
